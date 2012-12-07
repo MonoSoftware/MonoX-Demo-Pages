@@ -1,0 +1,33 @@
+<%@ Master
+    Language="C#"
+    AutoEventWireup="true"
+    Inherits="MonoSoftware.MonoX.MasterPages.Main"
+    EnableTheming="true"
+    Codebehind="Main.master.cs" %>
+
+<%@ Register Src="~/MonoX/MasterPages/AjaxErrorHandler.ascx" TagPrefix="monox" TagName="AjaxErrorHandler" %>
+
+<asp:literal runat="server" ID="ltlDoctype"></asp:literal>
+
+<html<asp:Literal runat="server" ID="ltlXmlns" /> <asp:Literal runat="server" ID="ltlRootHtml" />>
+<head runat="server">
+    <title></title>
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+    <link rel="apple-touch-icon" href="apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad3.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-iphone4.png">
+    <script src="http://buildserver:9080/target/target-script-min.js#anonymous"></script>
+</head>
+<body style="height:100%">
+    <form id="form1" runat="server" style="height: 100%">
+        <asp:ScriptManager ID="AjaxScriptManager" runat="server">
+        </asp:ScriptManager>    
+        <monox:AjaxErrorHandler id="ajaxErrorHandler" runat="server"></monox:AjaxErrorHandler>
+        <asp:ContentPlaceHolder ID="cp" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
