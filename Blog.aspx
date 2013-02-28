@@ -19,14 +19,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" Runat="Server">
     <div class="row-fluid">
-        <div class="span9">
+        <div class="span8">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="leftPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:BlogContainer ID="blogContainer" runat="server" UsePrettyPhoto="true" DateFormatString="d" RelatedContentVisible="false" EnableSyntaxHighlighter="true" GravatarRenderType="NotSet" />
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div class="span3">
+        <div class="span4">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightWebPartZone" runat="server" Width="100%" ChromeTemplateFile="RightColumn.htm" ShowChromeForNonAdmins="true">
                 <ZoneTemplate>
                     <MonoX:BlogInfo ID="blogInfo" CacheDuration="600" HideIfEmpty="true" runat="server" />

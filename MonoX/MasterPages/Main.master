@@ -19,7 +19,6 @@
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad3.png">
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone.png">
     <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-iphone4.png">
-    <script src="http://buildserver:9080/target/target-script-min.js#anonymous"></script>
 </head>
 <body style="height:100%">
     <form id="form1" runat="server" style="height: 100%">

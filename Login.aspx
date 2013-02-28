@@ -20,15 +20,18 @@
         <a href='<%= MonoSoftware.Web.UrlFormatter.ResolveServerUrl(MonoSoftware.MonoX.Utilities.LocalizationUtility.RewriteLink("~/")) %>' class="logo">
             <img id="Img1" runat="server" src="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.img.logo_png %>" alt="MonoX" />
         </a>
-    </div>
-    <div class="container-fluid-small">
-        <div class="login-top">
+        <div class="container-fluid-small">
             <asp:PlaceHolder ID="plhAuthorizationMessage" runat="server" Visible="false">
                 <div class="error">
                     <div><img src="<%= ResolveUrl(MonoSoftware.MonoX.Paths.App_Themes.img.Error_png) %>" alt="Error" /></div>
                     <%= ErrorMessages.Authorization_Login %>
                 </div>
             </asp:PlaceHolder>
+        </div>
+    </div>
+    <div class="container-fluid-small">
+        <div class="login-top">
+            
             <div>
                 <MonoX:Login runat="server" ID="ctlLogin" Width="100%"  />
             </div>

@@ -26,7 +26,7 @@
                     <MonoX:Wall runat="server" ID="snWallNotes" UsePrettyPhoto="true" ShowRating="false" GravatarRenderType="NotSet" WallNoteListVisible="false"  />                        
                     <MonoX:Events ID="ctlEvents" runat="server" PageSize="20" PagingEnabled="true" ></MonoX:Events>
                 </ZoneTemplate>
-                </portal:PortalWebPartZoneTableless>    
+                </portal:PortalWebPartZoneTableless>
             </div>
             <div class="span4">
                 <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_SocialZone %>' ID="connectPartZone" runat="server" Width="100%" ChromeTemplateFile="RightColumn.htm" ShowChromeForNonAdmins="true">

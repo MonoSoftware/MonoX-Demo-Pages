@@ -253,7 +253,7 @@ namespace MonoSoftware.MonoX.MasterPages
             string isLayoutDone = !IsLayoutDoneWithTable ? string.Format("if (document.getElementById('{0}')) {{ document.getElementById('{0}').style.display = ''; }}", pnlToolboxMain.ClientID) : string.Empty;
 
             string hideOnLoadScript = @"
-        <script type='text/javascript' language='javascript'>
+        <script type='text/javascript' >
                 //<![CDATA[ 
                     " +
                         isLayoutDone +

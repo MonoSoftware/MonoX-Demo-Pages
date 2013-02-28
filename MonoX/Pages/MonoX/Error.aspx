@@ -15,7 +15,8 @@
     </div>
     <div class="error-top-section">
         <div class="container-fluid-large">
-            <img runat="server" src="~/App_Themes/Default/img/error-bg.jpg" alt="Error background" class="scale-with-grid" />
+            <h1><%= MonoSoftware.MonoX.Resources.ErrorMessages.ErrorPage_Title %></h1>
+            <p><%= MonoSoftware.MonoX.Resources.ErrorMessages.ErrorPage_SubTitle %></p>
         </div>
     </div>
     <div class="error-bottom-section">

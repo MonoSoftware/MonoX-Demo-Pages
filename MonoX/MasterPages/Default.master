@@ -32,7 +32,7 @@
                 <div class="row-fluid">
                     <div class="span12">
             	        <div class="membership-search">
-                	        <img runat="server" src="~/App_Themes/Default/img/membership-search.jpg" alt="Banner" class="scale-with-grid" />
+                	        <img runat="server" src="~/App_Themes/Default/img/membership-search.jpg" alt="Memebership bg" class="membership-bg" />
                             <div class="membership-navigation-holder">
                                 <MonoX:MembershipNavigation runat="server" ID="ctlMemership" LoginStatusLogoutText="&nbsp;" />
                             </div>
@@ -41,7 +41,7 @@
                                 </MonoX:Search>
                             </div>
                         </div>
-        		        <img runat="server" src="~/App_Themes/Default/img/banner.jpg" alt="Banner" class="scale-with-grid" />
+        		        <img runat="server" src="~/App_Themes/Default/img/banner.jpg" alt="Banner" class="banner-img scale-with-grid" />
                     </div>
                 </div>
 		    </div>

@@ -124,28 +124,28 @@
                                 <div class="row-fluid">
                                     <div class="span3">
                                         <a href="~/MonoX/Mobile/Default.aspx" class="box">
-                                            <img runat="server" src="~/App_Themes/Default/img/Icons/icon-1.png" alt="MonoX Mobile" class="scale-with-grid" />
+                                            <img src="~/App_Themes/Default/img/Icons/icon-1.png" alt="MonoX Mobile" class="scale-with-grid" />
                                             <strong>MonoX Mobile</strong>
                                             <span>You can go for a responsive design, or build a separate mobile version of your site.</span>
                                         </a>
                                     </div>
                                     <div class="span3">
                                         <a href="~/MonoX/Pages/News.aspx" class="box">
-                                            <img runat="server" src="~/App_Themes/Default/img/Icons/icon-2.png" alt="News" class="scale-with-grid" />
+                                            <img src="~/App_Themes/Default/img/Icons/icon-2.png" alt="News" class="scale-with-grid" />
                                             <strong>News</strong>
                                             <span>Quickly and easily present news and updates to your audience.</span>
                                         </a>
                                     </div>
                                     <div class="span3">
                                         <a href="~/MonoX/Pages/SocialNetworking/EventCalendar.aspx" class="box">
-                                            <img runat="server" src="~/App_Themes/Default/img/Icons/icon-3.png" alt="Calendar" class="scale-with-grid" />
+                                            <img src="~/App_Themes/Default/img/Icons/icon-3.png" alt="Calendar" class="scale-with-grid" />
                                             <strong>Calendar</strong>
                                             <span>Display and organize all kinds of events using an intuitive interface.</span>
                                         </a>
                                     </div>
                                     <div class="span3">
                                         <a href="~/MonoX/Pages/SocialNetworking/Dashboard.aspx" class="box">
-                                            <img runat="server" src="~/App_Themes/Default/img/Icons/icon-4.png" alt="Social dashboard" class="scale-with-grid" />
+                                            <img src="~/App_Themes/Default/img/Icons/icon-4.png" alt="Social dashboard" class="scale-with-grid" />
                                             <strong>Social Dashboard</strong>
                                             <span>Show the most important social networking features in one place.</span>
                                         </a>
@@ -154,28 +154,28 @@
                                 <div class="row-fluid">
                                     <div class="span3">
                                         <a href="~/blog/posts/MonoX/" class="box">
-                                            <img runat="server" src="~/App_Themes/Default/img/Icons/icon-5.png" alt="Blogs" class="scale-with-grid" />
+                                            <img src="~/App_Themes/Default/img/Icons/icon-5.png" alt="Blogs" class="scale-with-grid" />
                                             <strong>Blogs</strong>
                                             <span>Install a multi-user blog system with anti-spam protection and support for customization.</span>
                                         </a>
                                     </div>
                                     <div class="span3">
                                         <a href="~/MonoX/Pages/SocialNetworking/Discussion.aspx" class="box">
-                                            <img runat="server" src="~/App_Themes/Default/img/Icons/icon-6.png" alt="Discussion boards" class="scale-with-grid" />
+                                            <img src="~/App_Themes/Default/img/Icons/icon-6.png" alt="Discussion boards" class="scale-with-grid" />
                                             <strong>Discussion Boards</strong>
                                             <span>Engage in conversation with full support for commenting, voting and moderation.</span>
                                         </a>
                                     </div>
                                     <div class="span3">
                                         <a href="~/MonoX/Pages/SocialNetworking/PhotoGallery.aspx" class="box">
-                                            <img runat="server" src="~/App_Themes/Default/img/Icons/icon-7.png" alt="Media galleries" class="scale-with-grid" />
+                                            <img src="~/App_Themes/Default/img/Icons/icon-7.png" alt="Media galleries" class="scale-with-grid" />
                                             <strong>Media galleries</strong>
                                             <span>Host and share videos, photos, resumes, or any other kind of binary attachments.</span>
                                         </a>
                                     </div>
                                     <div class="span3">
                                         <a href="~/MonoX/Pages/SocialNetworking/Groups.aspx" class="box">
-                                            <img runat="server" src="~/App_Themes/Default/img/Icons/icon-8.png" alt="Groups" class="scale-with-grid" />
+                                            <img src="~/App_Themes/Default/img/Icons/icon-8.png" alt="Groups" class="scale-with-grid" />
                                             <strong>Groups</strong>
                                             <span>Allow users to interact with each other around common topics.</span>
                                         </a>
