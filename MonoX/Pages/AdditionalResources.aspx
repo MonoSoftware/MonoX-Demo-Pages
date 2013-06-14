@@ -60,10 +60,6 @@
                     <h2>Webcasts</h2>
                     <ul class="list">
                         <li><a href="http://msevents.microsoft.com/CUI/WebCastEventDetails.aspx?EventID=1032266502&amp;EventCategory=5&amp;culture=en-US&amp;CountryCode=US" target="_blank">MSDN Events Reloaded - Microsoft ASP.NET 2.0 Overview (Level 200)</a></li>
-                        <li><a href="http://msevents.microsoft.com/CUI/WebCastEventDetails.aspx?EventID=1032290945&amp;EventCategory=5&amp;culture=en-US&amp;CountryCode=US" target="_blank">MSDN Webcast: ASP.NET Soup to Nuts: Web Part Controls (Level 200)</a></li>
-                        <li><a href="http://msevents.microsoft.com/CUI/WebCastEventDetails.aspx?EventID=1032290794&amp;EventCategory=5&amp;culture=en-US&amp;CountryCode=US" target="_blank">MSDN Architecture Webcast: Introduction to ASP.NET Web Part Framework (Level 200)</a></li>
-                        <li><a href="http://msevents.microsoft.com/CUI/WebCastEventDetails.aspx?EventID=1032291436&amp;EventCategory=5&amp;culture=en-US&amp;CountryCode=US" target="_blank">MSDN Webcast: Enabling Customizable User Interfaces in ASP.NET 2.0 Web Applications (Level 200)</a></li>
-                        <li><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?culture=en-US&amp;EventID=1032276877&amp;CountryCode=US" target="_blank">MSDN Webcast: Applying ASP.NET Web Parts: Building an RSS Aggregation Web Site (Level 200)</a></li>
                         <li><a href="http://msevents.microsoft.com/CUI/WebCastEventDetails.aspx?EventID=1032326987&amp;EventCategory=5&amp;culture=en-US&amp;CountryCode=US" target="_blank">MSDN Webcast: Introduction to ASP.NET 2.0 Web Part Framework (Level 300)</a></li>
                     </ul>
                     </DefaultContent>

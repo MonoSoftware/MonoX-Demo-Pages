@@ -13,7 +13,7 @@ namespace MonoSoftware.MonoX.Pages
         protected override void OnPreInit(EventArgs e)
         {            
             if (Request.IsLiveWriterRequest())
-                this.MasterPageFile = "~/MonoX/MasterPages/Empty.master";
+                this.MasterPageFile = Paths.MonoX.MasterPages.Empty_master;
             base.OnPreInit(e);
         }
 
@@ -22,7 +22,10 @@ namespace MonoSoftware.MonoX.Pages
             ctlLogin.EnableAutoFocus = true;
             plhAuthorizationMessage.Visible = UrlParams.Unauthorized.HasValue;
             ctlLogin.ShowRegisterButton = ApplicationSettings.EnableUserRegistration;
-            ctlLoginSocial.Visible = ApplicationSettings.EnableUserRegistration;
+            ctlLoginSocial.Visible = ApplicationSettings.EnableUserRegistration && !Page.User.Identity.IsAuthenticated;
+            ctlLogin.Visible = !Page.User.Identity.IsAuthenticated;
+            if (ctlMemership != null)
+                ctlMemership.Visible = !ctlLogin.Visible;
             base.OnLoad(e);
         }
 

@@ -390,11 +390,11 @@
                         <h2>Licensing and Support</h2>
                         <p>
                             <strong>Licensing</strong><br />
-                            MonoX is totally free for both commercial and non-commercial usage scenarios. You pay only if you need framework's <a href="http://www.mono-software.com/purchase/MonoX/" target="_blank">source code or a dedicated priority support contract</a>. More details can be found at our <a runat="server" href="~/ContentPage/Licensing/" title="licensing page">licensing page</a>. 
+                            MonoX is totally free for both commercial and non-commercial usage scenarios. You pay only if you need framework's <a href="http://www.mono-software.com/purchase/MonoX/" target="_blank">source code or a dedicated priority support contract</a>. More details can be found at our <a href="~/ContentPage/Licensing/" title="licensing page">licensing page</a>. 
                         </p>
                         <p>
                             <strong>Tradition</strong><br />
-                            First commercial release of MonoX was released in 2004. It introduced drag and drop and visual configuration features that are now accepted in the Microsoft's official Web part framework. It was voted as a runner-up in the prestigious <a href="http://www.devproconnections.com/article/tools-and-products/the-people-have-spoken.aspx" target="_blank">asp.netPRO Reader's Choice Awards</a>.
+                            First commercial release of MonoX was released in 2004. It introduced drag and drop and visual configuration features that are now accepted in the Microsoft's official Web part framework. It was voted as a runner-up in the prestigious <a href="http://devproconnections.com/development/people-have-spoken-30-oct-2009-0" target="_blank">asp.netPRO Reader's Choice Awards</a>.
                         </p>
                         <p>
                             <strong>Deployed portals</strong><br />

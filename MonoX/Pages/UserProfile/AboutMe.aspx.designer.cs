@@ -67,6 +67,15 @@ namespace MonoSoftware.MonoX.Pages.Profile {
         protected global::MonoSoftware.MonoX.ModuleGallery.GoogleMaps googleMaps;
         
         /// <summary>
+        /// socialDisconnect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MonoSoftware.MonoX.ModuleGallery.SocialDisconnect socialDisconnect;
+        
+        /// <summary>
         /// snFriendList control.
         /// </summary>
         /// <remarks>

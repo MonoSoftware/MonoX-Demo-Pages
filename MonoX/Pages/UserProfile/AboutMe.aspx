@@ -10,6 +10,7 @@
 <%@ Import Namespace="MonoSoftware.MonoX.Resources" %>
 <%@ Register TagPrefix="MonoX" TagName="PeopleSearch" Src="~/MonoX/ModuleGallery/SocialNetworking/PeopleSearch.ascx" %>
 <%@ Register TagPrefix="MonoX" TagName="FriendList" Src="~/MonoX/ModuleGallery/SocialNetworking/FriendList.ascx" %>
+<%@ Register TagPrefix="MonoX" TagName="SocialDisconnect" Src="~/MonoX/ModuleGallery/SocialDisconnect.ascx" %>
 <%@ Register TagPrefix="MonoX" TagName="EditProfile" Src="~/MonoX/ModuleGallery/ProfileModule/UserProfileModule.ascx" %>
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 <%@ Register TagPrefix="MonoX" TagName="ProfileHeader" Src="~/MonoX/ModuleGallery/ProfileModule/UserProfileHeader.ascx" %>
@@ -40,6 +41,7 @@
                         <ZoneTemplate>
                             <MonoX:PeopleSearch runat="server" ID="snPeopleSearch" ConfirmationRequired="true" />
                             <MonoX:GoogleMaps id="googleMaps" runat="server" WidthSizeUnitType="Percentage" Width="100"></MonoX:GoogleMaps>
+                            <MonoX:SocialDisconnect id="socialDisconnect" runat="server"></MonoX:SocialDisconnect>
                             <MonoX:FriendList runat="server" PageSize="9" AvatarSize="40" ID="snFriendList" Template="MyFriendList"></MonoX:FriendList>
                         </ZoneTemplate>
                     </portal:PortalWebPartZoneTableless>

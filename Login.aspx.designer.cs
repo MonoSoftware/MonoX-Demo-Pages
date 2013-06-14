@@ -40,6 +40,15 @@ namespace MonoSoftware.MonoX.Pages {
         protected global::System.Web.UI.WebControls.PlaceHolder plhAuthorizationMessage;
         
         /// <summary>
+        /// ctlMemership control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MonoSoftware.MonoX.MasterPages.MembershipNavigation ctlMemership;
+        
+        /// <summary>
         /// ctlLogin control.
         /// </summary>
         /// <remarks>

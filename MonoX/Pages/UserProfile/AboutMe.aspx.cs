@@ -19,19 +19,24 @@ namespace MonoSoftware.MonoX.Pages.Profile
             ctlProfile.ShowWorkingModeSwitch = false;            
             snFriendList.Visible = false;
             googleMaps.Visible = false;
+            socialDisconnect.Visible = false;
             if (!String.IsNullOrEmpty(UserName) && !Guid.Empty.Equals(UserId))
             {                
                 if (CurrentUser != null)
                 {
                     if ((SecurityUtility.GetUserId() == CurrentUser.Id) && Page.User.Identity.IsAuthenticated)
+                    {
                         ctlProfile.ShowWorkingModeSwitch = true;
+                        socialDisconnect.Visible = true;
+                    }
 
                     ctlProfile.UserId = CurrentUser.Id;
                     snFriendList.UserId = CurrentUser.Id;                    
                     snFriendList.Visible = true;
                     snPeopleSearch.UserId = CurrentUser.Id;
                     googleMaps.Visible = true;
-                    googleMaps.UserId = CurrentUser.Id;
+                    googleMaps.UserId = CurrentUser.Id;                    
+                    socialDisconnect.UserId = CurrentUser.Id;
                     profileHeader.UserId = UserId;
                     profileHeader.DataBind();
                 }
@@ -51,6 +56,7 @@ namespace MonoSoftware.MonoX.Pages.Profile
                 snFriendList.Title = String.Format(PageResources.Module_UserProfileFriends, nameToShow);
                 snPeopleSearch.Title = String.Format(PageResources.UserProfile_PeopleSearch_Title, nameToShow);
                 googleMaps.Title = String.Format(PageResources.UserProfile_Map_Title, nameToShow);
+                socialDisconnect.Title = DefaultResources.SocialDisconnect_Title;
                 this.SetPageTitle(String.Format(MonoSoftware.MonoX.Resources.PageResources.UserProfile_Title, nameToShow));
             }
             base.OnPreRender(e);

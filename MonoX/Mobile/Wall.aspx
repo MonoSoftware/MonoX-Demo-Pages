@@ -12,7 +12,7 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" runat="server">
-    <div data-role="fieldcontain">
+    <div>
         <MonoX:Wall AllowFileUpload="false" ShowPrivacyEditor="false" runat="server" ID="snWallNotes" UsePrettyPhoto="false" ShowRating="false" GravatarRenderType="NotSet" EnableLinkify="false" >
         </MonoX:Wall>   
     </div>
