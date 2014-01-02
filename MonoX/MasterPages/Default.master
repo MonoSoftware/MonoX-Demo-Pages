@@ -37,7 +37,7 @@
                                 <MonoX:MembershipNavigation runat="server" ID="ctlMemership" LoginStatusLogoutText="&nbsp;" />
                             </div>
                             <div class="search-holder">
-                                <MonoX:Search runat="server" ID="ctlSearch" TextBoxCssClass="mainSearchBoxInputField" ButtonCssClass="searchImage" ButtonText="Go" DefaultSearchText="<%$ Code:DefaultResources.SiteSearch_DefaultText %>">
+                                <MonoX:Search runat="server" ID="ctlSearch" TextBoxCssClass="mainSearchBoxInputField" ButtonCssClass="searchImage" ButtonText="Go" DefaultSearchText="<%$ Code:DefaultResources.SiteSearch_DefaultText %>">                                    
                                 </MonoX:Search>
                             </div>
                         </div>

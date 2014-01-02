@@ -41,11 +41,6 @@ namespace MonoSoftware.MonoX.MasterPages
         protected override void OnLoad(EventArgs e)
         {            
             ScriptManager.GetCurrent(this.Page).Scripts.Add(new ScriptReference(Paths.MonoX.Scripts.WebKitAjax_js));
-            //add the compatibility scripts for the IE6
-            if (Request.GetBrowserSettings().SubType.Equals(BrowserType.IE6))
-            {
-                ScriptManager.GetCurrent(this.Page).Scripts.Add(new ScriptReference(Paths.MonoX.Scripts.IE6.ie7_standard_p_js));
-            }
             base.OnLoad(e);
         }
 
