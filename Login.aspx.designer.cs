@@ -13,24 +13,6 @@ namespace MonoSoftware.MonoX.Pages {
     public partial class Login {
         
         /// <summary>
-        /// A1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
-        
-        /// <summary>
-        /// Img1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage Img1;
-        
-        /// <summary>
         /// plhAuthorizationMessage control.
         /// </summary>
         /// <remarks>
@@ -40,13 +22,13 @@ namespace MonoSoftware.MonoX.Pages {
         protected global::System.Web.UI.WebControls.PlaceHolder plhAuthorizationMessage;
         
         /// <summary>
-        /// ctlMemership control.
+        /// Img1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MonoSoftware.MonoX.MasterPages.MembershipNavigation ctlMemership;
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img1;
         
         /// <summary>
         /// ctlLogin control.
@@ -83,6 +65,15 @@ namespace MonoSoftware.MonoX.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Literal1;
+        
+        /// <summary>
+        /// A1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
         
         /// <summary>
         /// Master property.

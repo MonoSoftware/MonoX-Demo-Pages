@@ -10,25 +10,16 @@
 namespace MonoSoftware.MonoX.Pages {
     
     
-    public partial class PasswordRecovery {
+    public partial class NotFound {
         
         /// <summary>
-        /// Img1 control.
+        /// lnkHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage Img1;
-        
-        /// <summary>
-        /// ctlPasswordRecovery control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MonoSoftware.MonoX.ModuleGallery.PasswordRecovery ctlPasswordRecovery;
+        protected global::System.Web.UI.WebControls.HyperLink lnkHome;
         
         /// <summary>
         /// A1 control.

@@ -1,6 +1,6 @@
 <%@ Page 
     Language="C#" 
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"
+    MasterPageFile="~/MonoX/MasterPages/Default.master"
     AutoEventWireup="true"     
     Inherits="MonoSoftware.MonoX.BasePage" 
     Theme="Default"
@@ -11,8 +11,8 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" runat="server">
-    <div class="row-fluid">
-        <div class="span12">
+    <div class="content-wrapper">
+        <div class="main-content">
             <portal:PortalWebPartZone HeaderText="Left part zone" ID="leftWebPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor1" />             

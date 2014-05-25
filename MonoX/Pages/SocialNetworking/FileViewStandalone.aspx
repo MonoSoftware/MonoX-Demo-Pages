@@ -3,7 +3,7 @@
     AutoEventWireup="true"
     CodeBehind="FileViewStandalone.aspx.cs"
     Inherits="MonoSoftware.MonoX.Pages.SocialNetworking.FileView"
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"
+    MasterPageFile="~/MonoX/MasterPages/Default.master"
     MaintainScrollPositionOnPostback="true"
     %>  
 
@@ -14,9 +14,13 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" Runat="Server">    
-    <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
-        <ZoneTemplate>
-            <MonoX:FileView runat="server" ID="ctlFileView" />
-        </ZoneTemplate>
-    </portal:PortalWebPartZoneTableless>
+<div class="content-wrapper">
+    <div class="main-content">
+        <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
+            <ZoneTemplate>
+                <MonoX:FileView runat="server" ID="ctlFileView" />
+            </ZoneTemplate>
+        </portal:PortalWebPartZoneTableless>
+    </div>
+</div>
 </asp:Content>

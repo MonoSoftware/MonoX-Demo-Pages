@@ -18,6 +18,7 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
                     !UrlParams.SocialNetworking.Groups.InternalWorkingMode.HasValue;
             }
         }
+
         #endregion
 
         #region Page Events
@@ -50,21 +51,36 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
                 ctlInvitationsSent.Visible = false;
                 ctlInvitationsReceived.Visible = false;
             }
-
             this.SetPageTitle(MonoSoftware.MonoX.Resources.PageResources.Groups_Title);
             base.OnInit(e);
         }
 
-        protected override void OnPreRender(EventArgs e)
-        {
+        protected override void OnLoadComplete(EventArgs e)
+        {            
             //only group admins can see the invitation module
             if (ctlInvitationsSent.Visible)
                 ctlInvitationsSent.Visible = ctlPeopleSearch.CheckUserPrivileges();
             if (ctlInvitationsReceived.Visible)
                 ctlInvitationsReceived.Visible = ctlPeopleSearch.CheckUserPrivileges();
+
             plhHome.Visible = IsHome;
-            base.OnPreRender(e);
-        } 
+
+            // Important Note: It seems like PortalWebPartZoneTableless doesn't propagate visibility
+            // plhHome (visible) > rightWebPartZone (visible) > ctlGroupInfo (visible)
+            // plhHome.Visible = false;
+            // plhHome (false) > rightWebPartZone (false) > ctlGroupInfo (true)
+
+            var groupSelected = UrlParams.SocialNetworking.Groups.GroupId.HasValue;
+            ctlGroupInfo.Visible = IsHome && groupSelected;
+            ctlGroupMemberList.Visible = IsHome && groupSelected;
+            ctlPeopleSearch.Visible = IsHome && groupSelected;
+            ctlSearchGroups.Visible = IsHome;
+            ctlInvitationsSent.Visible = IsHome && groupSelected;
+            ctlInvitationsReceived.Visible = IsHome && groupSelected;
+
+            base.OnLoadComplete(e);
+        }
+
         #endregion
     }
 }

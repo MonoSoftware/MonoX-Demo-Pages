@@ -1,6 +1,6 @@
 <%@ Page
     Language="C#"
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"
+    MasterPageFile="~/MonoX/MasterPages/Default.master"
     AutoEventWireup="true"
     Inherits="MonoSoftware.MonoX.Pages.Features"
     Title="MonoX Features"
@@ -57,9 +57,8 @@
             });
         }
     </script>
-
-    <div id="tabs" class="row-fluid features clearfix">
-        <div id="tabsInner" class="span4">
+    <div id="tabs" class="content-wrapper two-columns content-pages">
+        <div id="tabsInner" class="side-content">
             <ul class="side-menu">
                 <li>
                     <a href="#tab-1">
@@ -105,13 +104,14 @@
                 </li>
             </ul>
             <div class="info-box">
-                <h1>Free ASP.NET CMS and SN Platform</h1>
-                MonoX provides tools for quick and intuitive construction of dynamic and fully editable ASP.NET portals, social networks and similar Web applications. For more details, please download the user manual.
-                <span class="arrow"></span>
+                <h4>Free ASP.NET CMS and SN Platform</h4>
+                <p>MonoX provides tools for quick and intuitive construction of dynamic and fully editable ASP.NET portals, social networks and similar Web applications. For more details, please download the user manual.</p>
+                <p><a href="http://www.mono-software.com/Downloads/#MonoX" target="_blank" class="regular-button">Download the user manual</a></p>
             </div>
-            <a href="http://www.mono-software.com/Downloads/#MonoX" target="_blank" class="styled-button">download the user manual</a>
+
         </div>
-        <div id="tab-1" class="span8 tab-container">
+
+        <div id="tab-1" class="main-content tab-container">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="tabOne" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor1" Title='<%$ Code: PageResources.Title_DescriptionOfFeatures %>' ShowRating="false">
@@ -162,7 +162,7 @@
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div id="tab-2" class="span8 tab-container">
+        <div id="tab-2" class="main-content tab-container">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="tabTwo" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor2" Title='<%$ Code: PageResources.Title_DescriptionOfFeatures %>' ShowRating="false">
@@ -210,7 +210,7 @@
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div id="tab-3" class="span8 tab-container">
+        <div id="tab-3" class="main-content tab-container">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="tabThree" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor3" Title='<%$ Code: PageResources.Title_DescriptionOfFeatures %>' ShowRating="false">
@@ -281,7 +281,7 @@
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div id="tab-4" class="span8 tab-container">
+        <div id="tab-4" class="main-content tab-container">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="tabFour" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor4" Title='<%$ Code: PageResources.Title_DescriptionOfFeatures %>' ShowRating="false">
@@ -336,7 +336,7 @@
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div id="tab-5" class="span8 tab-container">
+        <div id="tab-5" class="main-content tab-container">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="tabFive" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor5" Title='<%$ Code: PageResources.Title_DescriptionOfFeatures %>' ShowRating="false">
@@ -363,7 +363,7 @@
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div id="tab-6" class="span8 tab-container">
+        <div id="tab-6" class="main-content tab-container">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="tabSix" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor6" Title='<%$ Code: PageResources.Title_DescriptionOfFeatures %>' ShowRating="false">
@@ -382,7 +382,7 @@
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div id="tab-7" class="span8 tab-container">
+        <div id="tab-7" class="main-content tab-container">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="tabSeven" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor7" Title='<%$ Code: PageResources.Title_DescriptionOfFeatures %>' ShowRating="false">
@@ -394,7 +394,7 @@
                         </p>
                         <p>
                             <strong>Tradition</strong><br />
-                            First commercial release of MonoX was released in 2004. It introduced drag and drop and visual configuration features that are now accepted in the Microsoft's official Web part framework. It was voted as a runner-up in the prestigious <a href="http://devproconnections.com/development/people-have-spoken-30-oct-2009-0" target="_blank">asp.netPRO Reader's Choice Awards</a>.
+                            First commercial release of MonoX was released in 2004. It introduced drag and drop and visual configuration features that are now accepted in the Microsoft's official Web part framework. It was voted as a runner-up in the prestigious <a href="http://www.devproconnections.com/article/tools-and-products/the-people-have-spoken.aspx" target="_blank">asp.netPRO Reader's Choice Awards</a>.
                         </p>
                         <p>
                             <strong>Deployed portals</strong><br />

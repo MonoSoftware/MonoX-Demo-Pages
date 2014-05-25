@@ -9,43 +9,43 @@
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>    
 <%@ Register TagPrefix="MonoX" TagName="Login" Src="~/MonoX/ModuleGallery/LoginModule.ascx" %>
 <%@ Register TagPrefix="MonoX" TagName="LoginSocial" Src="~/MonoX/ModuleGallery/LoginSocial.ascx" %>
-<%@ Register TagPrefix="MonoX" TagName="MembershipNavigation" Src="~/MonoX/MasterPages/MembershipNavigation.ascx" %>
 
 <asp:Content ContentPlaceHolderID="cp" Runat="Server">
-    <div class="top-copyright">
-        Copyright &#169;<%= DateTime.UtcNow.Year.ToString() %>
-        <a href="http://www.mono-software.com">Mono Ltd.</a>
-        <a id="A1" runat="server" href="http://monox.mono-software.com" title="Powered by MonoX">Powered by MonoX</a>
-    </div>
-    <div class="empty-top-section">
-        <a href='<%= MonoSoftware.Web.UrlFormatter.ResolveServerUrl(MonoSoftware.MonoX.Utilities.LocalizationUtility.RewriteLink("~/")) %>' class="logo">
-            <img id="Img1" runat="server" src="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.img.logo_png %>" alt="MonoX" />
-        </a>        
-        <div class="container-fluid-small">
-            <asp:PlaceHolder ID="plhAuthorizationMessage" runat="server" Visible="false">
-                <div class="error">
-                    <div><img src="<%= ResolveUrl(MonoSoftware.MonoX.Paths.App_Themes.img.Error_png) %>" alt="Error" /></div>
-                    <%= ErrorMessages.Authorization_Login %>
+    <div class="content-wrapper" id="login-page">
+            <div class="error-message">
+                <asp:PlaceHolder ID="plhAuthorizationMessage" runat="server" Visible="false">
+                    <div class="error validation-summary">
+                        <img src="<%= ResolveUrl(MonoSoftware.MonoX.Paths.App_Themes.img.Error_png) %>" alt="Error" />
+                        <%= ErrorMessages.Authorization_Login %>
+                    </div>
+                </asp:PlaceHolder>
+            </div>
+
+            <div class="login-title">
+                <a href='<%= MonoSoftware.Web.UrlFormatter.ResolveServerUrl(MonoSoftware.MonoX.Utilities.LocalizationUtility.RewriteLink("~/")) %>' class="logo">
+                    <img id="Img1" runat="server" src="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.img.logo_png %>" alt="MonoX" />
+                </a>
+            </div>
+
+            <div class="page-login">
+                <MonoX:Login runat="server" ID="ctlLogin" Width="100%" />
+            </div>
+            <div id="rowRPX" runat="server" class="social-login-holder" Visible="<% $Code: MonoSoftware.MonoX.ApplicationSettings.EnableUserRegistration %>">
+                <MonoX:LoginSocial runat="server" ID="ctlLoginSocial" /> 
+                <div class="italic-style">
+                    <p><asp:Literal ID="Literal1" runat="server" Visible="<% $Code: MonoSoftware.MonoX.ApplicationSettings.EnableUserRegistration %>" Text="<% $Code: PageResources.Login_RpxWarning %>">
+                    </asp:Literal></p>
                 </div>
-            </asp:PlaceHolder>
-        </div>
+            </div>
+
+        <div id="footer-spacer"></div>
     </div>
-    <div class="container-fluid-small">
-        <div class="login-top">
-            <div class="clearfix">
-                <MonoX:MembershipNavigation runat="server" ID="ctlMemership" LoginStatusLogoutText="&nbsp;" />
-                <MonoX:Login runat="server" ID="ctlLogin" Width="100%"  />
-            </div>
+
+    <footer id="sticky-footer">
+        <div class="copyright">
+            Copyright &#169;2012
+            <a href="http://www.mono-software.com">Mono Ltd.</a>
+            <a id="A1" runat="server" href="http://monox.mono-software.com" title="Powered by MonoX">Powered by MonoX</a>
         </div>
-        <div id="rowRPX" runat="server" Visible="<% $Code: MonoSoftware.MonoX.ApplicationSettings.EnableUserRegistration && !Page.User.Identity.IsAuthenticated %>">
-            <div class="or-use">
-                <hr />
-                <div><%= PageResources.Login_Or %></div>
-            </div>
-            <div class="user-account login-social" >
-                <MonoX:LoginSocial runat="server" ID="ctlLoginSocial" />
-                <div class="italic-style"><asp:Literal ID="Literal1" runat="server" Visible="<% $Code: MonoSoftware.MonoX.ApplicationSettings.EnableUserRegistration %>" Text="<% $Code: PageResources.Login_RpxWarning %>"></asp:Literal></div>
-            </div>
-        </div>
-    </div>
+    </footer>
 </asp:Content>

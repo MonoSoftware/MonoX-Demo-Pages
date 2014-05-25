@@ -3,7 +3,7 @@
     AutoEventWireup="true"
     CodeBehind="EventCalendar.aspx.cs"
     Inherits="MonoSoftware.MonoX.Pages.SocialNetworking.EventCalendar"
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master" %>
+    MasterPageFile="~/MonoX/MasterPages/Default.master" %>
 
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>
 <%@ Import Namespace="MonoSoftware.MonoX.Resources" %>
@@ -11,8 +11,8 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" runat="Server">
-    <div class="row-fluid">
-        <div class="span12">
+    <div class="content-wrapper">
+        <div class="main-content events">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="leftPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:EventModule ID="eventModule" runat="server" Mode="Advanced" CalendarName="MonoXCalendar" AdvancedModeDefaultView="MonthView">

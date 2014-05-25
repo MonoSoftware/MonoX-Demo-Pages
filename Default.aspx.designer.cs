@@ -13,31 +13,13 @@ namespace MonoSoftware.MonoX.Pages {
     public partial class Default {
         
         /// <summary>
-        /// topPartZone control.
+        /// Img3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MonoSoftware.MonoX.PortalWebPartZoneTableless topPartZone;
-        
-        /// <summary>
-        /// editor2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MonoSoftware.MonoX.ModuleGallery.MonoXHtmlEditor editor2;
-        
-        /// <summary>
-        /// ctlSlideShow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MonoSoftware.MonoX.ModuleGallery.SlideShow ctlSlideShow;
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img3;
         
         /// <summary>
         /// middlePartZone control.
@@ -56,6 +38,33 @@ namespace MonoSoftware.MonoX.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MonoSoftware.MonoX.ModuleGallery.MonoXHtmlEditor editor3;
+        
+        /// <summary>
+        /// topPartZone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MonoSoftware.MonoX.PortalWebPartZoneTableless topPartZone;
+        
+        /// <summary>
+        /// editor2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MonoSoftware.MonoX.ModuleGallery.MonoXHtmlEditor editor2;
+        
+        /// <summary>
+        /// Img1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img1;
         
         /// <summary>
         /// bottomWebPartZone control.

@@ -1,6 +1,6 @@
 <%@ Page
     Language="C#"
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"
+    MasterPageFile="~/MonoX/MasterPages/Default.master"
     AutoEventWireup="true"
     Inherits="MonoSoftware.MonoX.Pages.AdditionalResources"
     Title="MonoX Resources"
@@ -12,20 +12,26 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="content1" ContentPlaceHolderID="cp" Runat="Server">
-    <div class="row-fluid">
-        <div class="span4">
+    <div class="content-wrapper two-columns content-pages">
+        <div class="side-content">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightWebPartZone" runat="server" Width="100%" ChromeTemplateFile="RightColumn.htm" ShowChromeForNonAdmins="true">
                 <ZoneTemplate>
+                    <div class="info-box">
                     <MonoX:Editor runat="server" ID="editor1" Title='<%$ Code: PageResources.Title_Resources %>'>
                     <DefaultContent>
-                    MonoX is built upon standard ASP.NET tools and techniques, so there are many additional resources that will help you learn how to use it efficiently in the shortest amount of time. <br /><br />
-                    This page presents MonoX documentation and additional resources on ASP.NET and Web part programming. Please do not hesitate to contact us if you need more information on these topics.
+                    
+                        <p>
+                        MonoX is built upon standard ASP.NET tools and techniques, so there are many additional resources that will help you learn how to use it efficiently in the shortest amount of time. <br /><br />
+                        This page presents MonoX documentation and additional resources on ASP.NET and Web part programming. Please do not hesitate to contact us if you need more information on these topics.
+                        </p>
+                    
                     </DefaultContent>
                     </MonoX:Editor>
+                    </div>
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>            
         </div>
-        <div class="span8 additional-resources">
+        <div class="main-content additional-resources">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="leftPartZone" runat="server" Width="100%" ChromeTemplateFile="LeftColumn.htm">
                 <ZoneTemplate>
                     <MonoX:Editor runat="server" ID="editor2" Title='<%$ Code: PageResources.Title_AdditionalResources %>'>
@@ -66,6 +72,7 @@
                     </MonoX:Editor>
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
+
         </div>
     </div>
 </asp:Content>

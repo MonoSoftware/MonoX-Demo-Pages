@@ -13,15 +13,6 @@ namespace MonoSoftware.MonoX.Pages {
     public partial class ActivationEmailRecovery {
         
         /// <summary>
-        /// A1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
-        
-        /// <summary>
         /// Img1 control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace MonoSoftware.MonoX.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MonoSoftware.MonoX.ModuleGallery.ActivationEmailRecovery ctlActivationEmailRecovery;
+        
+        /// <summary>
+        /// A1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
         
         /// <summary>
         /// Master property.

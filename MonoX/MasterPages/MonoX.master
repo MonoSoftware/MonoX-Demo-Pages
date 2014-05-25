@@ -22,42 +22,51 @@
         </portal:PortalWebPartManager>
 
         <asp:Panel ID="pnlToggle" runat="server" CssClass="adminPanelTopBar">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;" runat="server" id="tblTop">
+            <table runat="server" id="tblTop" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                    <td align="left">
-                        <span style="padding-left:10px;white-space:nowrap;"><asp:literal runat="server" ID="ltlClickHere"></asp:literal>&nbsp;&nbsp;</span> <asp:Literal runat="server" Text="|" ID="ltlSeparator"></asp:Literal>
-                        <span class="portalAdminBgImg" onclick="var event = arguments[0] || window.event; if (event.cancelBubble != null) event.cancelBubble=true; else event.stopPropagation();">&nbsp;&nbsp;<asp:HyperLink NavigateUrl='<%# MonoSoftware.MonoX.Utilities.LocalizationUtility.RewriteLink("~/MonoX/Admin/Default.aspx") %>' ID="lnkAdminDefault" runat="server"><asp:Literal runat="server" ID="ltlPortalAdmin"></asp:Literal></asp:HyperLink></span>
+                    <td>
+                        <div class="admin-bar-holder">
+                            <div class="label-holder">
+                                <span><asp:literal runat="server" ID="ltlClickHere"></asp:literal> <span style="display: none"><asp:Literal runat="server" Text="|" ID="ltlSeparator"></asp:Literal></span>
+                            </div>
+                            <div class="admin-holder">
+                                <span class="portalAdminBgImg" onclick="var event = arguments[0] || window.event; if (event.cancelBubble != null) event.cancelBubble=true; else event.stopPropagation();">
+                                    <asp:HyperLink NavigateUrl='<%# MonoSoftware.MonoX.Utilities.LocalizationUtility.RewriteLink("~/MonoX/Admin/Default.aspx") %>' ID="lnkAdminDefault" runat="server">
+                                        <asp:Literal runat="server" ID="ltlPortalAdmin"></asp:Literal>
+                                    </asp:HyperLink>
+                                </span>
+                            </div>
+                            <div class="login-holder">
+                                <asp:LoginName ID="loginNameShort" runat="server" />
+                                <asp:LoginStatus ID="loginStatusShort" runat="server" />
+                            </div>                   
+                            
+                            <div>
+                                <span><asp:Literal runat="server" ID="ltlCache"></asp:Literal></span>
+                                <asp:HyperLink runat="server" ID="lnkRefreshCache" OnClientClick="var event = arguments[0] || window.event; if (event.cancelBubble != null) event.cancelBubble=true; else event.stopPropagation();"></asp:HyperLink>
+                            </div>
+                            <div class="help-holder">
+                                <asp:HyperLink ID="lnkMonoHelp" Target="_blank" runat="server" NavigateUrl="http://www.mono-software.com/Downloads/#MonoX" >
+                                    <asp:Image id="imgHelp" ImageUrl="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.All.DefaultAdmin.img.Help20_png %>" style="border:0;" runat="server" />
+                                </asp:HyperLink>
+                            </div>
+                            <div class="info-holder">
+                                <span><asp:Literal runat="server" ID="ltlInfo"></asp:Literal></span>
+                            </div>
+                        </div>
                     </td>
-                    
-                    <td align="right">
-                        &nbsp;[&nbsp;<asp:LoginName ID="loginNameShort" runat="server" />
-                        &nbsp;
-                        <asp:LoginStatus ID="loginStatusShort" runat="server" />&nbsp;]&nbsp;
-                    </td>                    
-                    <td align="right" style="width:30px">
-                        <asp:Image ImageUrl="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.All.DefaultAdmin.img.expandSlidingAreaIcon_gif %>" style="border:0; margin-right:5px;" ID="imgToggle" runat="server" />
-                    </td>
-                    <td align="right" style="width:30px;">
-                        <asp:HyperLink ID="lnkMonoHelp" Target="_blank" style="border:0; margin-right:20px;" runat="server" NavigateUrl="http://www.mono-software.com/Downloads/#MonoX" >
-                            <asp:Image id="imgHelp" ImageUrl="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.All.DefaultAdmin.img.Help20_png %>" style="border:0;" runat="server" />
-                        </asp:HyperLink>
+                    <td class="open-close-icon">
+                        <div class="open-close-options">
+                            <asp:Image ImageUrl="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.All.DefaultAdmin.img.expandSlidingAreaIcon_gif %>" ID="imgToggle" runat="server" />
+                        </div>
                     </td>
                 </tr>
-                <tr style="font-size: 10px;">
-                    <td align="left" colspan="1">
-                        <span style="padding-left:10px;"><asp:Literal runat="server" ID="ltlCache"></asp:Literal></span>
-                        <asp:HyperLink runat="server" ID="lnkRefreshCache" OnClientClick="var event = arguments[0] || window.event; if (event.cancelBubble != null) event.cancelBubble=true; else event.stopPropagation();"></asp:HyperLink>
-                    </td>
-                    <td align="right" colspan="3">
-                        <span style="padding-right:10px;"><asp:Literal runat="server" ID="ltlInfo"></asp:Literal></span>
-                    </td>
-                </tr>
-            </table> 
+            </table>
         </asp:Panel>
         
-        <div id="toolbox_content" runat="server" style="width:100%">
+        <div id="toolbox_content" runat="server" class="property-holder">
             <asp:Panel ID="pnlToolboxMain" runat="server" ScrollBars="Auto" Width="100%" Height="0">
-                <telerik:RadTabStrip ID="tabAdminStrip" CssClass="tabStripHeader" runat="server" MultiPageID="adminMultiPage" SelectedIndex="0" CausesValidation="false" >
+                <telerik:RadTabStrip ID="tabAdminStrip" CssClass="tabStripHeader" runat="server" MultiPageID="adminMultiPage" SelectedIndex="0" CausesValidation="false" Skin="MetroTouch" >
                     <Tabs> 
                         <telerik:RadTab ID="tabPageTasksPane" runat="server" PageViewID="PageTasksPaneView"></telerik:RadTab>
                         <telerik:RadTab ID="tabEditorPane" runat="server" PageViewID="EditorPaneView"></telerik:RadTab>
@@ -68,10 +77,10 @@
                 </telerik:RadTabStrip>
                 
                 <telerik:RadMultiPage id="adminMultiPage" runat="server" SelectedIndex="0" Width="100%">
-                    <telerik:RadPageView ID="PageTasksPaneView" runat="server" Width="100%">
+                    <telerik:RadPageView ID="PageTasksPaneView" runat="server" Width="100%" Skin="MetroTouch" CssClass="property-fields-first">
                             <MonoX:PageTasks ID="ctlPageTasks" runat="server" />
                     </telerik:RadPageView>
-                    <telerik:RadPageView ID="EditorPaneView" runat="server">
+                    <telerik:RadPageView ID="EditorPaneView" runat="server" Skin="MetroTouch" CssClass="property-fields-menu">
                         <portal:CollapsibleEditorZone ID="editorZone" runat="server" EditorPartsAdded="False" Width="100%">
                             <ZoneTemplate>
                                 <portal:PropertyGridEditorPart ID="propertyGridEditorPart" CssClass="monoxEditorPart" runat="server" />
@@ -81,7 +90,7 @@
                             </ZoneTemplate>
                         </portal:CollapsibleEditorZone>
                     </telerik:RadPageView>
-                    <telerik:RadPageView ID="CatalogPaneView" runat="server">
+                    <telerik:RadPageView ID="CatalogPaneView" runat="server" Skin="MetroTouch" CssClass="property-fields-catalogue">
                         <portal:PortalCatalogZone ID="catalogZone" runat="server" >
                             <ZoneTemplate>
                                 <portal:AutoRegisterCatalogPart ID="autoRegisterCatalogPart" runat="server" Title="<% $Code: DefaultResources.MonoXMaster_AutoRegisterCatalogPart_Title %>"  />
@@ -96,11 +105,11 @@
                             </ZoneTemplate>
                         </portal:PortalCatalogZone>
                     </telerik:RadPageView>
-                    <telerik:RadPageView ID="ConnectionsPaneView" runat="server">
+                    <telerik:RadPageView ID="ConnectionsPaneView" runat="server" Skin="MetroTouch">
                         <div style="padding:4px;"><asp:Label runat="server" ID="lblConnectionsDescription"></asp:Label></div>
                         <portal:PortalConnectionsZone ID="connectionsZone" runat="server" />
                     </telerik:RadPageView>
-                    <telerik:RadPageView ID="ControlsPaneView" runat="server">
+                    <telerik:RadPageView ID="ControlsPaneView" runat="server" Skin="MetroTouch">
                         <div class="edit-part-source-list">
                             <strong><asp:Literal runat="server" ID="ltlControlsHeader"></asp:Literal></strong>
                             <ul>

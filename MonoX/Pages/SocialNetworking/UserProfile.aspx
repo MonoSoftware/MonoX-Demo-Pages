@@ -1,7 +1,7 @@
 ﻿<%@ Page 
     Title=""
     Language="C#"
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"
+    MasterPageFile="~/MonoX/MasterPages/Default.master"
     AutoEventWireup="true"
     CodeBehind="UserProfile.aspx.cs"
     Inherits="MonoSoftware.MonoX.Pages.SocialNetworking.UserProfile"
@@ -18,8 +18,8 @@
 <%@ Register TagPrefix="MonoX" TagName="InvitationList" Src="~/MonoX/ModuleGallery/SocialNetworking/InvitationList.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" runat="server">
-    <div class="row-fluid">
-        <div class="span12">
+    <div class="content-wrapper">
+        <div class="main-content">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="leftPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:EditProfile id="ctlProfile" runat="server" AutoDetectUser="false" HiddenFieldsString="FirstName,LastName" GravatarRenderType="NotSet" >
@@ -31,15 +31,15 @@
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div class="row-fluid">
-            <div class="span8">
+        <div class="content-wrapper two-columns">
+            <div class="main-content">
                 <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="leftPartZone1" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                     <ZoneTemplate>
                         <MonoX:Wall runat="server" ID="snWallNotes" UsePrettyPhoto="true" GravatarRenderType="NotSet" />
                     </ZoneTemplate>
                 </portal:PortalWebPartZoneTableless>
             </div>
-            <div class="span4">
+            <div class="side-content">
                 <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightWebPartZone" runat="server" Width="100%" ChromeTemplateFile="RightColumn.htm" ShowChromeForNonAdmins="true">
                     <ZoneTemplate>
                         <MonoX:PeopleSearch runat="server" ID="snPeopleSearch" ConfirmationRequired="true" />

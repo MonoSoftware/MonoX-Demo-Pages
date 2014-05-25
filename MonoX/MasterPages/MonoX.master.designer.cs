@@ -94,13 +94,22 @@ namespace MonoSoftware.MonoX.MasterPages {
         protected global::System.Web.UI.WebControls.LoginStatus loginStatusShort;
         
         /// <summary>
-        /// imgToggle control.
+        /// ltlCache control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgToggle;
+        protected global::System.Web.UI.WebControls.Literal ltlCache;
+        
+        /// <summary>
+        /// lnkRefreshCache control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkRefreshCache;
         
         /// <summary>
         /// lnkMonoHelp control.
@@ -121,24 +130,6 @@ namespace MonoSoftware.MonoX.MasterPages {
         protected global::System.Web.UI.WebControls.Image imgHelp;
         
         /// <summary>
-        /// ltlCache control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltlCache;
-        
-        /// <summary>
-        /// lnkRefreshCache control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkRefreshCache;
-        
-        /// <summary>
         /// ltlInfo control.
         /// </summary>
         /// <remarks>
@@ -146,6 +137,15 @@ namespace MonoSoftware.MonoX.MasterPages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltlInfo;
+        
+        /// <summary>
+        /// imgToggle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgToggle;
         
         /// <summary>
         /// toolbox_content control.

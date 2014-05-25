@@ -3,7 +3,7 @@
     AutoEventWireup="true"
     CodeBehind="Groups.aspx.cs"
     Inherits="MonoSoftware.MonoX.Pages.SocialNetworking.Groups"
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"    
+    MasterPageFile="~/MonoX/MasterPages/Default.master"    
 %>
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>   
 <%@ Import Namespace="MonoSoftware.MonoX.Resources" %>
@@ -17,8 +17,8 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" Runat="Server">
-    <div class="row-fluid">
-        <div class="<%= IsHome ? "span8" : "span12" %>">
+    <div class="content-wrapper two-columns group">
+        <div class="<%= IsHome ? "group-two-quarters" : "group-full-width" %>">
             <portal:PortalWebPartZoneTableless Orientation="Vertical" HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="leftPartZone" runat="server" Width="100%" ChromeTemplateFile="LeftColumn.htm">
                 <ZoneTemplate>
                     <MonoX:GroupContainer runat="server" ID="ctlGroupContainer" GravatarRenderType="NotSet" />                        
@@ -26,7 +26,7 @@
             </portal:PortalWebPartZoneTableless>
         </div>
         <asp:PlaceHolder ID="plhHome" runat="server">
-            <div class="span4">
+            <div class="side-content">
                 <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightWebPartZone" runat="server" Width="100%" ChromeTemplateFile="RightColumn.htm" ShowChromeForNonAdmins="true">
                     <ZoneTemplate>
                         <MonoX:GroupInfo runat="server" CacheDuration="600" ID="ctlGroupInfo" />

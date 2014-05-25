@@ -3,7 +3,7 @@
     AutoEventWireup="True"
     CodeBehind="News.aspx.cs"
     Inherits="MonoSoftware.MonoX.Pages.News"    
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master" %>
+    MasterPageFile="~/MonoX/MasterPages/Default.master" %>
         
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>   
 
@@ -12,8 +12,8 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" runat="server">
-    <div class="row-fluid">
-        <div class="span12">
+    <div class="content-wrapper">
+        <div class="main-content">
             <h2><asp:Literal runat="server" ID="ltlTitle"></asp:Literal></h2>
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_ContentZone %>' ID="contentPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>

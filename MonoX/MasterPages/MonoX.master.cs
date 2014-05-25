@@ -222,6 +222,7 @@ namespace MonoSoftware.MonoX.MasterPages
                     radWindowManager.ReloadOnShow = true;
                     radWindowManager.ID = "editorSourceWindowManager";
                     radWindowManager.OnClientClose = "EditSourceRefreshParentPage";
+                    radWindowManager.Skin = "MetroTouch";
                     this.Page.Form.Controls.Add(radWindowManager);
                 }
 

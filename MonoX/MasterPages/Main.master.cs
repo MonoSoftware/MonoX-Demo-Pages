@@ -34,6 +34,8 @@ namespace MonoSoftware.MonoX.MasterPages
         protected override void OnLoad(EventArgs e)
         {            
             ScriptManager.GetCurrent(this.Page).Scripts.Add(new ScriptReference(Paths.MonoX.Scripts.WebKitAjax_js));
+            ScriptManager.GetCurrent(this.Page).Scripts.Add(new ScriptReference(Paths.MonoX.Scripts.WebFormsOverrides_js));
+            ScriptManager.GetCurrent(this.Page).Scripts.Add(new ScriptReference(Paths.MonoX.Scripts.TextareaMaxLength_js));
             base.OnLoad(e);
         }
 

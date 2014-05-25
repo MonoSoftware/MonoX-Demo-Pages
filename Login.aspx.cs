@@ -24,8 +24,6 @@ namespace MonoSoftware.MonoX.Pages
             ctlLogin.ShowRegisterButton = ApplicationSettings.EnableUserRegistration;
             ctlLoginSocial.Visible = ApplicationSettings.EnableUserRegistration && !Page.User.Identity.IsAuthenticated;
             ctlLogin.Visible = !Page.User.Identity.IsAuthenticated;
-            if (ctlMemership != null)
-                ctlMemership.Visible = !ctlLogin.Visible;
             base.OnLoad(e);
         }
 

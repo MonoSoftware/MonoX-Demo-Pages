@@ -3,7 +3,7 @@
     AutoEventWireup="True"
     CodeBehind="Dashboard.aspx.cs"
     Inherits="MonoSoftware.MonoX.Pages.SocialNetworking.Dashboard"
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"
+    MasterPageFile="~/MonoX/MasterPages/Default.master"
     MaintainScrollPositionOnPostback="true" %>
         
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>   
@@ -19,8 +19,8 @@
     
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" runat="server">
     <div class="dashboard">
-        <div class="row-fluid">
-            <div class="span8">
+        <div class="content-wrapper two-columns">
+            <div class="main-content">
                 <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_SocialZone %>' ID="activityPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Wall runat="server" ID="snWallNotes" UsePrettyPhoto="true" ShowRating="false" GravatarRenderType="NotSet" WallNoteListVisible="false"  />                        
@@ -28,7 +28,7 @@
                 </ZoneTemplate>
                 </portal:PortalWebPartZoneTableless>
             </div>
-            <div class="span4">
+            <div class="side-content">
                 <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_SocialZone %>' ID="connectPartZone" runat="server" Width="100%" ChromeTemplateFile="RightColumn.htm" ShowChromeForNonAdmins="true">
                 <ZoneTemplate>
                     <MonoX:FriendSuggestionsList ID="friendSuggestionsList" runat="server" NumberOfFriendSuggestions="8" ShowSearchBox="true" SuggestionMode="Shorten"></MonoX:FriendSuggestionsList>

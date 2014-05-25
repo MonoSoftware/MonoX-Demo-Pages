@@ -2,7 +2,7 @@
     AutoEventWireup="true"
     CodeBehind="Wall.aspx.cs"
     Inherits="MonoSoftware.MonoX.Pages.SocialNetworking.Wall"
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"
+    MasterPageFile="~/MonoX/MasterPages/Default.master"
     MaintainScrollPositionOnPostback="true"
     %>
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>   
@@ -16,15 +16,15 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" Runat="Server">  
-    <div class="row-fluid">
-        <div class="span8">
+    <div class="content-wrapper two-columns">
+        <div class="main-content">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="leftPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:Wall runat="server" ID="snWallNotes" UsePrettyPhoto="true" ShowRating="false" GravatarRenderType="NotSet"  />                        
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div class="span4">
+        <div class="side-content">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightWebPartZone" runat="server" Width="100%" ChromeTemplateFile="Rightcolumn.htm" ShowChromeForNonAdmins="true">
                 <ZoneTemplate>
                     <MonoX:PeopleSearch runat="server" CacheDuration="600" ConfirmationRequired="true" ID="snPeopleSearch" />

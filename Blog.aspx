@@ -1,6 +1,6 @@
 <%@ Page
     Language="C#" 
-    MasterPageFile="~/MonoX/MasterPages/DefaultSmallHeader.master"
+    MasterPageFile="~/MonoX/MasterPages/Default.master"
     AutoEventWireup="true" 
     Inherits="MonoSoftware.MonoX.Pages.Blog" 
     Title="MonoX Blog"
@@ -18,15 +18,15 @@
 <%@ Register Assembly="MonoX" Namespace="MonoSoftware.MonoX" TagPrefix="portal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" Runat="Server">
-    <div class="row-fluid">
-        <div class="span8">
+    <div class="content-wrapper two-columns blog">
+        <div class="main-content">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_LeftPartZone %>' ID="leftPartZone" runat="server" Width="100%" ChromeTemplateFile="Standard.htm">
                 <ZoneTemplate>
                     <MonoX:BlogContainer ID="blogContainer" runat="server" UsePrettyPhoto="true" DateFormatString="d" RelatedContentVisible="false" EnableSyntaxHighlighter="true" GravatarRenderType="NotSet" />
                 </ZoneTemplate>
             </portal:PortalWebPartZoneTableless>
         </div>
-        <div class="span4">
+        <div class="side-content">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightWebPartZone" runat="server" Width="100%" ChromeTemplateFile="RightColumn.htm" ShowChromeForNonAdmins="true">
                 <ZoneTemplate>
                     <MonoX:BlogInfo ID="blogInfo" CacheDuration="600" HideIfEmpty="true" runat="server" />

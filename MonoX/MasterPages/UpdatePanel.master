@@ -18,7 +18,11 @@
     <asp:UpdateProgress AssociatedUpdatePanelID="ajaxPanelMain" ID="updateProgressMain" DisplayAfter="0" runat="server">
         <ProgressTemplate>
             <div class="ajaxOverlay"></div>
-            <div class="ajaxLoader"><asp:Literal ID="ltlLoading" runat="server"></asp:Literal><br /><br /><img id="Img1" alt="Loading" runat="server" src="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.All.Common.img.ajaxLoader_gif %>" /></div>
+            <div class="ajaxLoader">
+                <span><asp:Literal ID="ltlLoading" runat="server"></asp:Literal></span>
+                <br /><br />
+                <img id="Img1" alt="Loading" runat="server" src="<%$ Code: MonoSoftware.MonoX.Paths.App_Themes.All.Common.img.ajaxLoader_gif %>" />
+            </div>
         </ProgressTemplate>
     </asp:UpdateProgress>
 </div>
