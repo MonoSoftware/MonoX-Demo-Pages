@@ -10,9 +10,9 @@ namespace MonoSoftware.MonoX.Mobile
     public partial class ActivationEmailRecovery : BaseMobilePage
     {
         protected override void OnInit(EventArgs e)
-        {            
-            ctlActivationEmailRecovery.ActivationEmailSendingCompleted += new EventHandler(ctlActivationEmailRecovery_ActivationEmailSendingCompleted);
+        {
             base.OnInit(e);
+            ctlActivationEmailRecovery.ActivationEmailSendingCompleted += new EventHandler(ctlActivationEmailRecovery_ActivationEmailSendingCompleted);            
         }
 
         void ctlActivationEmailRecovery_ActivationEmailSendingCompleted(object sender, EventArgs e)

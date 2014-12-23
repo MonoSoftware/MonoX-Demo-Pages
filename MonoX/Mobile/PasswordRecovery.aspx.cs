@@ -10,9 +10,9 @@ namespace MonoSoftware.MonoX.Mobile
     public partial class PasswordRecovery : BaseMobilePage
     {
         protected override void OnInit(EventArgs e)
-        {            
-            ctlPasswordRecovery.PasswordRecoveryEmailSendingCompleted += new EventHandler(ctlPasswordRecovery_PasswordRecoveryEmailSendingCompleted);
+        {
             base.OnInit(e);
+            ctlPasswordRecovery.PasswordRecoveryEmailSendingCompleted += new EventHandler(ctlPasswordRecovery_PasswordRecoveryEmailSendingCompleted);            
         }
 
         void ctlPasswordRecovery_PasswordRecoveryEmailSendingCompleted(object sender, EventArgs e)

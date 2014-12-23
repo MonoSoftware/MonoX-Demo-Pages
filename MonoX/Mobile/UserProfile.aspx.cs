@@ -15,7 +15,8 @@ namespace MonoSoftware.MonoX.Mobile
 
         #region Page Events
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             ctlProfile.Title = PageResources.UserProfile_UserProfile_Title;
             string userName = string.Empty;
             if (UrlParams.UserProfile.UserName.HasValue)
@@ -25,7 +26,7 @@ namespace MonoSoftware.MonoX.Mobile
             if (!String.IsNullOrEmpty(userName) && !Guid.Empty.Equals(userId))
             {
                 this.SetPageTitle(String.Format(MonoSoftware.MonoX.Resources.PageResources.UserProfile_Title, userName));
-                CurrentUser = UserProfileBLL.GetInstance().GetCachedUserProfile(userId);
+                CurrentUser = DependencyInjectionFactory.Resolve<IUserProfileBLL>().GetCachedUserProfile(userId);
                 if (CurrentUser != null)
                 {
                     if ((SecurityUtility.GetUserId() == CurrentUser.Id) && Page.User.Identity.IsAuthenticated)
@@ -37,8 +38,7 @@ namespace MonoSoftware.MonoX.Mobile
             else
             {
                 this.SetPageTitle(MonoSoftware.MonoX.Resources.PageResources.UserProfile_NoSuchUser);
-            }
-            base.OnInit(e);
+            }            
         }
 
 

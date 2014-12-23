@@ -6,11 +6,11 @@ namespace MonoSoftware.MonoX.Pages
     {
         #region Page Events
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             ctlMembershipEditor.AccountCreationCompleted += new EventHandler(ctlMembership_AccountCreationCompleted);
             if (!ApplicationSettings.EnableUserRegistration)
-                Message.Show(Resources.DefaultResources.Registration_RegistrationNotAllowed_Title, Resources.DefaultResources.Registration_RegistrationNotAllowed_Description, ApplicationSettings.MessagePageUrl);
-            base.OnInit(e);
+                Message.Show(Resources.DefaultResources.Registration_RegistrationNotAllowed_Title, Resources.DefaultResources.Registration_RegistrationNotAllowed_Description, ApplicationSettings.MessagePageUrl);            
         }
 
         protected override void OnPreRender(EventArgs e)

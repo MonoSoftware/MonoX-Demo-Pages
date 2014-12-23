@@ -27,6 +27,6 @@
                     <MonoX:Editor runat="server" ID="editor2" />  
                 </ZoneTemplate>
             </portal:PortalWebPartZone>
-        </div>
+        </div>        
     </div>
 </asp:Content>

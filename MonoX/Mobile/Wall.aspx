@@ -4,7 +4,6 @@
     CodeBehind="Wall.aspx.cs"
     Inherits="MonoSoftware.MonoX.Mobile.Wall"
     MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"
-    Theme="Mobile"
 %>
         
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>  

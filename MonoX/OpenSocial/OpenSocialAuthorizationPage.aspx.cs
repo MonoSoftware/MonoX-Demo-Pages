@@ -27,7 +27,8 @@ namespace MonoSoftware.MonoX.OpenSocial
 
         #region Page Events
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             if (!Page.User.Identity.IsAuthenticated)
             {
                 throw new SecurityException();
@@ -37,8 +38,7 @@ namespace MonoSoftware.MonoX.OpenSocial
             btnDeny.Text = MonoSoftware.MonoX.Resources.DefaultResources.OpenSocial_Deny;
 
             btnAllow.Click += new EventHandler(btnAllow_Click);
-            btnDeny.Click += new EventHandler(btnDeny_Click);
-            base.OnInit(e);
+            btnDeny.Click += new EventHandler(btnDeny_Click);            
         }
         #endregion
 

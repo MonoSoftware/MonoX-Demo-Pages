@@ -1,7 +1,6 @@
 ﻿<%@ Page 
     Language="C#" 
-    MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"
-    Theme="Mobile"
+    MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"    
     AutoEventWireup="true" 
     Inherits="MonoSoftware.MonoX.Mobile.PasswordRecovery" 
     Codebehind="PasswordRecovery.aspx.cs" %>

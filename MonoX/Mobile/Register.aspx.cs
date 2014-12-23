@@ -10,11 +10,11 @@ namespace MonoSoftware.MonoX.Mobile
     public partial class Register : BaseMobilePage
     {
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             ctlMembershipEditor.AccountCreationCompleted += new EventHandler(ctlMembership_AccountCreationCompleted);
             if (!ApplicationSettings.EnableUserRegistration)
-                MobileMessage.Show(Resources.DefaultResources.Registration_RegistrationNotAllowed_Title, Resources.DefaultResources.Registration_RegistrationNotAllowed_Description, Paths.MonoX.Mobile.MobileMessage_aspx);
-            base.OnInit(e);
+                MobileMessage.Show(Resources.DefaultResources.Registration_RegistrationNotAllowed_Title, Resources.DefaultResources.Registration_RegistrationNotAllowed_Description, Paths.MonoX.Mobile.MobileMessage_aspx);            
         }
 
         protected override void OnPreRender(EventArgs e)

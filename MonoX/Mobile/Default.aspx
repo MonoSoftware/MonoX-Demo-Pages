@@ -4,7 +4,6 @@
     CodeBehind="Default.aspx.cs"
     Inherits="MonoSoftware.MonoX.Mobile.Default"
     MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"
-    Theme="Mobile"
     HashListeningEnabled="true"
 %>
         

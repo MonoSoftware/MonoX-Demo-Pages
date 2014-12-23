@@ -4,7 +4,6 @@
     CodeBehind="ActivationEmailRecovery.aspx.cs"
     Inherits="MonoSoftware.MonoX.Mobile.ActivationEmailRecovery"
     MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"
-    Theme="Mobile"
 %>
 <%@ Register TagPrefix="MonoX" TagName="ActivationEmailRecovery" Src="~/MonoX/ModuleGallery/Mobile/ActivationEmailRecovery.ascx" %>
 

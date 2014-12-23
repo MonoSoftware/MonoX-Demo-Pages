@@ -23,7 +23,7 @@
         <div class="intro-wrapper">
             <div class="intro-headline">
                 <h1>Free ASP.NET<br /> Content Management and Social Networking Platform</h1>
-                <p>Full responsive and adaptive to all desktop and mobile devices and platforms</p>
+                <p>Fully responsive and adaptive to all desktop and mobile devices and platforms</p>
             </div>
             <div class="intro-image">
                 <img id="Img3" src="~/App_Themes/Default/img/banner-image.png" runat="server" />
@@ -47,9 +47,8 @@
             <ZoneTemplate>
                 <MonoX:Editor runat="server" ID="editor3" Title='<%$ Code: PageResources.Title_MiddleSection %>' DefaultDocumentTitle='<%$ Code: PageResources.Title_MiddleSection %>'>
                     <DefaultContent>
-                                <h2>Monox. <br />Fast. Powerful. Flexible. <em>And it comes at the price you cannot beat.</em></h2>
-                                <p>Inspired by the latest Web technologies and built on top of the Web parts infrastructure, MonoX features an intuitive, user-friendly user interface that supports drag and drop editing, WYSIWYG interface, advanced templating engine and personalization. It provides everything you need to build fully-featured social </p>
-                                <p>environments, including user profiles, third-party authorization, user relationship modules, a multi-user blog engine with automatic anti-spam protection, photo albums, customizable group architecture, discussion boards, file galleries, support for activity streams, messaging, chat, video sharing, walls and comments. </p>
+                                <h2>MonoX. <br />Fast. Powerful. Flexible. <em>And it comes at the price you cannot beat.</em></h2>
+                                <p>Inspired by the latest Web technologies and built on top of the Web parts infrastructure, MonoX features an intuitive, user-friendly user interface that supports drag and drop editing, WYSIWYG interface, advanced templating engine and personalization. It provides everything you need to build fully-featured social environments, including user profiles, third-party authorization, user relationship modules, a multi-user blog engine with automatic anti-spam protection, photo albums, customizable group architecture, discussion boards, file galleries, support for activity streams, messaging, chat, video sharing, walls and comments. </p>
                                     
                     </DefaultContent>
                 </MonoX:Editor>
@@ -105,40 +104,40 @@
             <div class="home-slider">
                 <ul data-orbit>
                     <li>
-                        <img id="Img1" runat="server" src="~/App_Themes/Default/img/Projects/project-theorio.jpg" />
-                    </li>
-                    <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-3.jpg" />
-                    </li>
-                    <li>
                         <img runat="server" src="~/App_Themes/Default/img/Projects/project-admovie.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-edenrecruitment.jpg" />
+                        <img id="Img1" runat="server" src="~/App_Themes/Default/img/Projects/project-clipfair.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-jobsboard.jpg" />
+                        <img id="Img2" runat="server" src="~/App_Themes/Default/img/Projects/project-cpl.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-mono-software.jpg" />
+                        <img id="Img4" runat="server" src="~/App_Themes/Default/img/Projects/project-edenrecruitment.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-cpl.jpg" />
+                        <img id="Img5" runat="server" src="~/App_Themes/Default/img/Projects/project-gourus.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-sbaopen.jpg" />
+                        <img id="Img6" runat="server" src="~/App_Themes/Default/img/Projects/project-home.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-clipfair.jpg" />
+                        <img id="Img7" runat="server" src="~/App_Themes/Default/img/Projects/project-jobsboard.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-gourus.jpg" />
+                        <img id="Img8" runat="server" src="~/App_Themes/Default/img/Projects/project-mono-software.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-home.jpg" />
+                        <img id="Img9" runat="server" src="~/App_Themes/Default/img/Projects/project-pitcheo.jpg" />
                     </li>
                     <li>
-                        <img runat="server" src="~/App_Themes/Default/img/Projects/project-yoquiero.jpg" />
+                        <img id="Img10" runat="server" src="~/App_Themes/Default/img/Projects/project-sbaopen.jpg" />
+                    </li>
+                    <li>
+                        <img id="Img11" runat="server" src="~/App_Themes/Default/img/Projects/project-theorio.jpg" />
+                    </li>
+                    <li>
+                        <img id="Img12" runat="server" src="~/App_Themes/Default/img/Projects/project-yoquiero.jpg" />
                     </li>
                 </ul>
             </div>
@@ -213,6 +212,6 @@
     </portal:PortalWebPartZoneTableless>
 </div>
     <script type="text/javascript">
-        $(document).foundation('orbit', { bullets: false, slide_number: false, timer_speed: 5000,  resume_on_mouseout: true });
+        $(document).foundation('orbit', { bullets: false, resume_on_mouseout: true, timer_speed: 5000, animation: 'fade', animation_speed: 250 });
     </script>
 </asp:Content>

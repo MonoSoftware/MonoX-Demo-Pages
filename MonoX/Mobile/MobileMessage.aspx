@@ -3,7 +3,6 @@
     MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"
     AutoEventWireup="true" 
     Inherits="MonoSoftware.MonoX.Mobile.MobileMessage" 
-    Theme="Mobile" 
     Codebehind="MobileMessage.aspx.cs" %>
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>
 

@@ -36,14 +36,14 @@ namespace MonoSoftware.MonoX.MasterPages
         #region Page Events
 
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             _wpm = WebPartManager.GetCurrentWebPartManager(this.Page);
             if (this.Page is BasePage)
                 ((BasePage)this.Page).ToolboxPanel = pnlToolboxMain;
             ltlInfo.Text = String.Format("MonoX v{0} [{1}], DB v{2}", MonoSoftware.MonoX.Utilities.MonoXUtility.AssemblyVersion, MonoSoftware.MonoX.Utilities.MonoXUtility.AssemblyDate.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern), MonoSoftware.MonoX.Utilities.MonoXUtility.DBVersion);
             SetRefreshCacheUrl();
-            CheckCacheRefresh();
-            base.OnInit(e);
+            CheckCacheRefresh();            
         }
 
         private void SetRefreshCacheUrl()

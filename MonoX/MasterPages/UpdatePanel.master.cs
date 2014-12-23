@@ -7,8 +7,8 @@ namespace MonoSoftware.MonoX.MasterPages
     {
         protected override void OnInit(EventArgs e)
         {
-            this.MainUpdatePanel = ajaxPanelMain;
             base.OnInit(e);
+            this.MainUpdatePanel = ajaxPanelMain;            
         }
 
         protected override void OnLoad(EventArgs e)

@@ -18,12 +18,12 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
                     !UrlParams.SocialNetworking.Groups.InternalWorkingMode.HasValue;
             }
         }
-
         #endregion
 
         #region Page Events
         protected override void OnInit(EventArgs e)
         {
+            base.OnInit(e);
             ctlGroupInfo.Title = PageResources.Groups_GroupInfo;
             ctlGroupMemberList.Title = PageResources.Groups_GroupMembers;
             ctlPeopleSearch.Title = PageResources.Module_PeopleSearch;
@@ -52,7 +52,6 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
                 ctlInvitationsReceived.Visible = false;
             }
             this.SetPageTitle(MonoSoftware.MonoX.Resources.PageResources.Groups_Title);
-            base.OnInit(e);
         }
 
         protected override void OnLoadComplete(EventArgs e)

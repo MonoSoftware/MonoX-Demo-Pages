@@ -4,7 +4,6 @@
     CodeBehind="Friends.aspx.cs"
     Inherits="MonoSoftware.MonoX.Mobile.Friends"
     MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"
-    Theme="Mobile"
 %>
         
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>  

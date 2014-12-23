@@ -3,8 +3,7 @@
     AutoEventWireup="True"
     CodeBehind="UserProfile.aspx.cs"
     Inherits="MonoSoftware.MonoX.Mobile.UserProfile"
-    MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"
-    Theme="Mobile"
+    MasterPageFile="~/MonoX/MasterPages/Mobile/Default.master"    
 %>
         
 <%@ MasterType TypeName="MonoSoftware.MonoX.BaseMasterPage" %>  

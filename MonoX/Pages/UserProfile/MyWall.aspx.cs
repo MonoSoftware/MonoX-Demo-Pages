@@ -4,6 +4,7 @@ using MonoSoftware.MonoX.BusinessLayer;
 using MonoSoftware.MonoX.Utilities;
 using MonoSoftware.MonoX.Repositories;
 using MonoSoftware.Web;
+using MonoSoftware.MonoX.Common.DependencyInjection;
 namespace MonoSoftware.MonoX.Pages.Profile
 {
     public partial class MyWall : BaseProfilePage
@@ -27,6 +28,7 @@ namespace MonoSoftware.MonoX.Pages.Profile
             snFriendList.Visible = false;
             googleMaps.Visible = false;
             discussionTopicMessages.Visible = false;
+            recentPhotos.Visible = false;
             if (!String.IsNullOrEmpty(UserName) && !Guid.Empty.Equals(UserId))
             {
                 if (CurrentUser != null)
@@ -47,6 +49,9 @@ namespace MonoSoftware.MonoX.Pages.Profile
                     discussionTopicMessages.BindData();
                     profileHeader.UserId = UserId;
                     profileHeader.DataBind();
+                    recentPhotos.Visible = true;
+                    recentPhotos.UserId = UserId;
+                    recentPhotos.BindData();
                 }
             }
             else
@@ -67,7 +72,7 @@ namespace MonoSoftware.MonoX.Pages.Profile
                 snWallNotes.Title = String.Format(PageResources.Module_WallNotes, nameToShow);
                 googleMaps.Title = String.Format(PageResources.UserProfile_Map_Title, nameToShow);
                 myPhotos.Title = String.Format(PageResources.Module_UserProfilePhotos, nameToShow);
-                snWallNotes.AllowPostingNotes = Page.User.Identity.IsAuthenticated && (FriendRepository.GetInstance().RelationshipExists(SecurityUtility.GetUserId(), CurrentUser.Id) || SecurityUtility.GetUserId().Equals(CurrentUser.Id)) && !FriendRepository.GetInstance().IsUserBlocked(CurrentUser.Id, SecurityUtility.GetUserId()); 
+                snWallNotes.AllowPostingNotes = Page.User.Identity.IsAuthenticated && (DependencyInjectionFactory.Resolve<IFriendBLL>().RelationshipExists(SecurityUtility.GetUserId(), CurrentUser.Id) || SecurityUtility.GetUserId().Equals(CurrentUser.Id)) && !DependencyInjectionFactory.Resolve<IFriendBLL>().IsUserBlocked(CurrentUser.Id, SecurityUtility.GetUserId()); 
                 this.SetPageTitle(String.Format(MonoSoftware.MonoX.Resources.PageResources.UserProfile_Title, nameToShow));                
             }
             base.OnPreRender(e);

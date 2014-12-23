@@ -9,9 +9,9 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
         #region Page Events
         protected override void OnInit(EventArgs e)
         {
-            this.SetPageTitle(MonoSoftware.MonoX.Resources.PageResources.Dashboard_Title);
-            snWallNotes.NoteSaved += new EventHandler<EventArgs<Guid>>(snWallNotes_NoteSaved);
             base.OnInit(e);
+            this.SetPageTitle(MonoSoftware.MonoX.Resources.PageResources.Dashboard_Title);
+            snWallNotes.NoteSaved += new EventHandler<EventArgs<Guid>>(snWallNotes_NoteSaved);            
         }
 
         protected override void OnLoad(EventArgs e)

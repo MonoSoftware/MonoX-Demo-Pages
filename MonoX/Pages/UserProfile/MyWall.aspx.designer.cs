@@ -58,6 +58,15 @@ namespace MonoSoftware.MonoX.Pages.Profile {
         protected global::MonoSoftware.MonoX.ModuleGallery.SocialNetworking.PeopleSearch snPeopleSearch;
         
         /// <summary>
+        /// recentPhotos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MonoSoftware.MonoX.ModuleGallery.RecentPhotos recentPhotos;
+        
+        /// <summary>
         /// googleMaps control.
         /// </summary>
         /// <remarks>

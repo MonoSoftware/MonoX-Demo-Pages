@@ -15,7 +15,8 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
 
         #region Page Events
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             ctlProfile.MyStatusChanged += new EventHandler(ctlProfile_MyStatusChanged);
             ctlProfile.Title = PageResources.UserProfile_UserProfile_Title;
             snPeopleSearch.InfoText = PageResources.UserProfile_PeopleSearch_InfoText;
@@ -37,7 +38,7 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
                 snPeopleSearch.Title = string.Format(PageResources.UserProfile_PeopleSearch_Title, userName);
                 snWallNotes.Title = String.Format(PageResources.Module_WallNotes, userName);
                 this.SetPageTitle(String.Format(MonoSoftware.MonoX.Resources.PageResources.UserProfile_Title, userName));
-                CurrentUser = UserProfileBLL.GetInstance().GetCachedUserProfile(userId);
+                CurrentUser = DependencyInjectionFactory.Resolve<IUserProfileBLL>().GetCachedUserProfile(userId);
                 if (CurrentUser != null)
                 {
                     string nameToShow = (CurrentUser != null && !string.IsNullOrEmpty(CurrentUser.FirstName)? CurrentUser.FirstName : CurrentUser.AspnetUser.UserName);                        
@@ -63,8 +64,7 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
             else
             {
                 this.SetPageTitle(MonoSoftware.MonoX.Resources.PageResources.UserProfile_NoSuchUser); 
-            }
-            base.OnInit(e);
+            }            
         }
 
         protected override void OnLoad(EventArgs e)

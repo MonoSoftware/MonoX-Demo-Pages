@@ -10,9 +10,9 @@ namespace MonoSoftware.MonoX.Mobile
     public partial class Login : BaseMobilePage
     {
         protected override void OnInit(EventArgs e)
-        {            
-            ctlLogin.DestinationPageUrl = Paths.MonoX.Mobile.Default_aspx;
+        {
             base.OnInit(e);
+            ctlLogin.DestinationPageUrl = Paths.MonoX.Mobile.Default_aspx;            
         }
     }
 }

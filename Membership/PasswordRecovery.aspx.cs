@@ -7,9 +7,9 @@ namespace MonoSoftware.MonoX.Pages
         #region Page Events
         protected override void OnInit(EventArgs e)
         {
-            ctlPasswordRecovery.PasswordRecoveryEmailSendingCompleted += new EventHandler(ctlPasswordRecovery_PasswordRecoveryEmailSendingCompleted);
-            ctlPasswordRecovery.PasswordRecoveryRequestEmailSending += new System.ComponentModel.CancelEventHandler(ctlPasswordRecovery_PasswordRecoveryRequestEmailSending);
             base.OnInit(e);
+            ctlPasswordRecovery.PasswordRecoveryEmailSendingCompleted += new EventHandler(ctlPasswordRecovery_PasswordRecoveryEmailSendingCompleted);
+            ctlPasswordRecovery.PasswordRecoveryRequestEmailSending += new System.ComponentModel.CancelEventHandler(ctlPasswordRecovery_PasswordRecoveryRequestEmailSending);            
         } 
         #endregion
 

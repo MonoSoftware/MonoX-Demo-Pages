@@ -5,9 +5,9 @@ namespace MonoSoftware.MonoX.Pages
     public partial class ActivationEmailRecovery : BasePage
     {
         protected override void OnInit(EventArgs e)
-        {            
-            ctlActivationEmailRecovery.ActivationEmailSendingCompleted += new EventHandler(ctlActivationEmailRecovery_ActivationEmailSendingCompleted);
+        {
             base.OnInit(e);
+            ctlActivationEmailRecovery.ActivationEmailSendingCompleted += new EventHandler(ctlActivationEmailRecovery_ActivationEmailSendingCompleted);            
         }
 
         void ctlActivationEmailRecovery_ActivationEmailSendingCompleted(object sender, EventArgs e)

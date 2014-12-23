@@ -27,14 +27,14 @@ namespace MonoSoftware.MonoX.MasterPages
 
         #region Page Events
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             if (!String.IsNullOrEmpty(ApplicationSettings.jQueryReferencePath))
-            {
+            {                
                 JavascriptUtility.RegisterClientScriptInclude(this.Page, UrlFormatter.ResolveUrl(ApplicationSettings.jQueryReferencePath));
             }
             AjaxScriptManager.AsyncPostBackError += new EventHandler<AsyncPostBackErrorEventArgs>(AjaxScriptManager_OnAsyncPostBackError);
-            AjaxScriptManager.AllowCustomErrorsRedirect = false;
-            base.OnInit(e);
+            AjaxScriptManager.AllowCustomErrorsRedirect = false;            
         }
 
         protected override void OnLoad(EventArgs e)

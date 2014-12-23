@@ -14,6 +14,7 @@
 <%@ Register TagPrefix="MonoX" TagName="MyPhotos" Src="~/MonoX/ModuleGallery/SocialNetworking/PhotoGallery/MyPhotos.ascx" %>
 <%@ Register TagPrefix="MonoX" TagName="GoogleMaps" Src="~/MonoX/ModuleGallery/GoogleMaps.ascx" %>
 <%@ Register TagPrefix="MonoX" TagName="DiscussionMessages" Src="~/MonoX/ModuleGallery/SocialNetworking/Discussion/DiscussionMessages.ascx" %>
+<%@ Register TagPrefix="MonoX" TagName="RecentPhotos" Src="~/MonoX/ModuleGallery/ProfileModule/RecentPhotos.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cp" Runat="Server">
 
@@ -31,7 +32,8 @@
         <div class="side-content">
             <portal:PortalWebPartZoneTableless HeaderText='<%$ Code: PageResources.Zone_RightPartZone %>' ID="rightWebPartZone" runat="server" Width="100%" ChromeTemplateFile="RightColumnSimple.htm" ShowChromeForNonAdmins="true">
                 <ZoneTemplate>
-                    <MonoX:PeopleSearch runat="server" CacheDuration="600" ConfirmationRequired="true" ID="snPeopleSearch" />
+                    <MonoX:PeopleSearch runat="server" CacheDuration="600" ConfirmationRequired="true" IsRequired="true" ID="snPeopleSearch" />
+                    <MonoX:RecentPhotos ID="recentPhotos" runat="server" />
                     <MonoX:GoogleMaps id="googleMaps" runat="server" WidthSizeUnitType="Percentage" Width="100"></MonoX:GoogleMaps>
                     <MonoX:FriendList runat="server" PageSize="12" ID="snFriendList" Template="MyFriendList" EnablePaging="false"></MonoX:FriendList>
                     <MonoX:MyPhotos ID="myPhotos" runat="server" PageSize="6" GroupItemCount="2" EnablePaging="false" ></MonoX:MyPhotos>

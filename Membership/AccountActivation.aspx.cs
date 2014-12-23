@@ -62,8 +62,8 @@ namespace MonoSoftware.MonoX.Pages
         #region Page Events
         protected override void OnInit(EventArgs e)
         {
-            OnUserActivating(new EventArgs<Guid?>(UrlParams.UserId.HasValue ? UrlParams.UserId.Value.Guid : default(Guid?)));
             base.OnInit(e);
+            OnUserActivating(new EventArgs<Guid?>(UrlParams.UserId.HasValue ? UrlParams.UserId.Value.Guid : default(Guid?)));            
         } 
         #endregion
 

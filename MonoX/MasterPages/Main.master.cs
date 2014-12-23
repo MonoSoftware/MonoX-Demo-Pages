@@ -12,7 +12,8 @@ namespace MonoSoftware.MonoX.MasterPages
     {
         #region Page Events
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             //DO NOT change the ID of the master page - it conflicts with several of the 3rd party controls, including RadComboBox (LoadOnDemand scenario)
             //this.ID = "mp1";
             //NOTE: modified MicrosoftAjax.js is used to achieve compatibility with Google Chrome - and WebKit-based browsers like Safari - via ScriptReference to ~/MonoX/scripts/WebKitAjax.js in ascx file
@@ -27,8 +28,7 @@ namespace MonoSoftware.MonoX.MasterPages
                 PageUtility.InjectJQueryUIHeaders(this.Page);
             }            
             AjaxScriptManager.AsyncPostBackError += new EventHandler<AsyncPostBackErrorEventArgs>(AjaxScriptManager_OnAsyncPostBackError);
-            AjaxScriptManager.AllowCustomErrorsRedirect = false;
-            base.OnInit(e);
+            AjaxScriptManager.AllowCustomErrorsRedirect = false;            
         }
 
         protected override void OnLoad(EventArgs e)

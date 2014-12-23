@@ -4,6 +4,7 @@ using MonoSoftware.Web;
 using MonoSoftware.Core;
 using MonoSoftware.MonoX.Resources;
 using MonoSoftware.MonoX.Utilities;
+using MonoSoftware.MonoX.BusinessLayer;
 
 namespace MonoSoftware.MonoX.Pages
 {
@@ -57,9 +58,9 @@ namespace MonoSoftware.MonoX.Pages
         #region Page Events
         protected override void OnInit(EventArgs e)
         {
-            btnYes.Click += new EventHandler(btnYes_Click);
-            btnNo.Click += new EventHandler(btnNo_Click);            
             base.OnInit(e);
+            btnYes.Click += new EventHandler(btnYes_Click);
+            btnNo.Click += new EventHandler(btnNo_Click);                        
         }
 
         protected override void OnLoad(EventArgs e)
@@ -74,7 +75,7 @@ namespace MonoSoftware.MonoX.Pages
             if (PagePathToRemove.HasValue)
             {
                 VersionedPersonalizationProvider provider = (VersionedPersonalizationProvider)System.Web.UI.WebControls.WebParts.PersonalizationAdministration.Provider;
-                panWarning.Visible = PageRepository.GetInstance().PagePathExists(provider.GeneratePersonalizationUrl(PagePathToRemove.Value));
+                panWarning.Visible = DependencyInjectionFactory.Resolve<IPageBLL>().PagePathExists(provider.GeneratePersonalizationUrl(PagePathToRemove.Value));
             }
             panNotFound.Visible = !panWarning.Visible && !panSuccess.Visible;
             if (!SecurityUtility.IsAdmin())
@@ -90,7 +91,7 @@ namespace MonoSoftware.MonoX.Pages
         /// <param name="e">Event arguments holding the page path</param>
         protected virtual void OnPersonalizationRemoval(EventArgs<string> e)
         {
-            PageRepository.GetInstance().EnsurePagePersonalizationRemoval(e.Value);
+            DependencyInjectionFactory.Resolve<IPageBLL>().EnsurePagePersonalizationRemoval(e.Value);
         }
 
         /// <summary>

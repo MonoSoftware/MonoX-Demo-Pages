@@ -8,8 +8,8 @@ namespace MonoSoftware.MonoX.Mobile
     {
         protected override void OnInit(EventArgs e)
         {
-            PageUtility.InjectJQMobileHeaders(this, false, false, this.IsAsyncPostBack());
             base.OnInit(e);
+            PageUtility.InjectJQMobileHeaders(this, false, false, this.IsAsyncPostBack());            
         }
     }
 }

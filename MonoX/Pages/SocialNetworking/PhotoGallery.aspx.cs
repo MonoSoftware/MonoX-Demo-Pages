@@ -9,14 +9,14 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
     {
 
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             this.SetPageTitle(PageResources.PhotoGallery_Title);
             snPhotoGallery.Title = PageResources.Module_PhotoGallery;
             snPhotoGallery.DefaultActiveControl = ActivePhotoGalleryControl.AlbumList;
             snPhotoGalleryNewAlbums.Title = PageResources.Module_PhotoGallery;
             snPhotoGalleryNewAlbums.UserId = SecurityUtility.GetUserId();
-            snPhotoGallery.AvailablePrivacyLevelIds.Remove(PrivacyLevelEntity.PrivacyLevelFriends.Id);
-            base.OnInit(e);
+            snPhotoGallery.AvailablePrivacyLevelIds.Remove(PrivacyLevelEntity.PrivacyLevelFriends.Id);            
         }
     }
 }

@@ -11,14 +11,14 @@ namespace MonoSoftware.MonoX.Pages.SocialNetworking
         }
 
         protected override void OnInit(EventArgs e)
-        {            
+        {
+            base.OnInit(e);
             this.SetPageTitle(PageResources.Wall_Title);
             snWallNotes.Title = PageResources.Module_WallNotes;
             snPeopleSearch.Title = PageResources.Module_PeopleSearch;
             snFriendList.Title = PageResources.Module_Friends;
             ctlInvitationsReceived.Title = PageResources.Module_InvitationsReceived;
-            ctlInvitationsSent.Title = PageResources.Module_InvitationsSent;
-            base.OnInit(e);
-        }
+            ctlInvitationsSent.Title = PageResources.Module_InvitationsSent;            
+        }        
     }
 }
